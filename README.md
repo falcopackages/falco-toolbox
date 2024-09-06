@@ -7,8 +7,11 @@
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [License](#license)
+- [falco\_toolbox](#falco_toolbox)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [License](#license)
+  - [Acknowledgements](#acknowledgements)
 
 ## Installation
 
@@ -19,3 +22,7 @@ pip install falco-toolbox
 ## License
 
 `falco-toolbox` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+## Acknowledgements
+
+A lot of the code in this package was taken from [django-twc-toolbox](https://github.com/westerveltco/django-twc-toolbox). The license file has been updated to reflect this.
