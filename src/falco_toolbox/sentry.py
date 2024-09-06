@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from django_twc_toolbox.conf import app_settings
+from .conf import app_settings
 
 if TYPE_CHECKING:
     from sentry_sdk._types import SamplingContext
