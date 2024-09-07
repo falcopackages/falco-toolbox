@@ -43,14 +43,22 @@ def get_template_absolute_path(template_path):
 
 
 class Command(BaseCommand):
-    help = "Copies a template from a package into your project"
+    help = "Copies a template from a package into your project, if no destination is provided, it will copy the template to the project level templates directory"
 
     def add_arguments(self, parser):
-        parser.add_argument("source", type=str)
-        parser.add_argument("destination", type=str, nargs="?")
+        parser.add_argument(
+            "source",
+            type=str,
+            help="The path to the template to copy, e.g. 'allauth/account/login.html'",
+        )
+        parser.add_argument(
+            "destination",
+            type=str,
+            nargs="?",
+            help="An optional app where the template should be copied",
+        )
 
     def handle(self, *args, **options):
-        print(options)
         # 1. extract the options
         source = options["source"]
         destination = options.get("destination")
